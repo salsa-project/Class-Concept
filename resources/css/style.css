@@ -1,0 +1,160 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: monospace, sans-serif;
+}
+#logo,.item, #navSwitch, #order, #preview{
+  cursor: pointer;
+}
+#navbar, #c2, #showcase, .card{
+  display: flex;
+}
+#c2, #showcase, .card{
+  align-items: center;
+}
+#navbar, #showcase, .card{
+border-bottom: 1px lightgray solid;
+}
+.card, footer{
+  border-top: 1px lightgray solid;
+}
+#navbar, #subMenu, #preview, #c4{
+  background-color: white;
+}
+#c1, #subMenu, #showcase>p, .card>h2, footer>p, .c4Item{
+  text-align: center;
+}
+#navbar, #c2, #order, #preview, #subMenuContainer>#subMenu{
+  width: 100%;
+}
+#c2, #subMenu, #c4{
+  list-style: none;
+}
+#active, #preview, .subItem:hover{
+  color: #FC353B;
+}
+#subMenu, #c4{
+  border: 1px lightgray solid;
+}
+#navbar{
+  position: fixed;
+  top: 0px;
+  height: 45px;
+}
+#c1{
+  width: 35%;
+}
+#logo{
+  width: 50px;
+}
+#c2{
+justify-content: space-around;
+}
+.subMenuContainer{
+  position: relative;
+}
+#subMenu{
+  visibility: hidden;
+  position: absolute;
+  top: 165%;
+  left: -25%;
+  width: 150%;
+  padding: 10px;
+  border-top: 0px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.subItem{
+  padding: 10px 0px;
+  font-size: 11pt;
+}
+.subMenuContainer:hover #subMenu{
+  visibility: visible;
+  opacity: 1;
+}
+#c3{
+  display: none;
+  width: 35%;
+}
+#navSwitch{
+  height: 100%;
+  width: 25px;
+  margin: 10px auto 0px;
+  background: url("https://www.iconsdb.com/icons/preview/color/FC353B/menu-4-xxl.png") top no-repeat;
+  background-size: 100%;
+}
+#showcase{
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  margin-top: 45px;
+}
+#showcase>h1{
+  color: red;
+}
+#showcase>p, .card>h2, footer>p, .c4Item:hover{
+  color: gray;
+}
+#showcase>p{
+  width: 70%;
+  margin-top: 20px;
+}
+.card{
+  justify-content: space-between;
+  height: 170px;
+  width: 75%;
+  padding: 5px;
+  margin: 50px auto 0px;
+}
+#cardImg{
+  height: 105%;
+  width: 250px;
+}
+.card>h2{
+  margin-bottom: 20px;
+  font-size: 2.5vw;
+  font-weight: 200;
+}
+#preview, #order{
+  border: 0px;
+}
+#order{
+  height: 85px;
+  margin: 20px auto 0px;
+  color: white;
+  background-color: #80C159;
+  font-size: 15pt;
+  font-weight: 900;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+#preview{
+  height: 25px;
+  margin: 10px auto -20px;
+  font-size: 10pt;
+}
+footer{
+  height: 120px;
+  margin-top: 50px;
+}
+footer>p{
+  width: 60%;
+  padding: 20px;
+  margin: 20px auto 0px;
+}
+@media screen and (max-width: 600px) {
+  #c2{display: none;}
+  #c3{position: relative; display: block; margin-left: 30%;}
+  #navSwitch:hover #c4{visibility: visible; opacity: 1;}
+  #c4{visibility: hidden; position: absolute; top: 100%; right: 10%; width: 150px; opacity:0; transition: all 0.3s ease;}
+  .c4Item{padding: 10px;}
+  #c4>#subMenuContainer::before{position:absolute; top: 15px; left: 5px; content:""; border: 5px yellow solid; border-color: transparent black transparent transparent;}
+  #subMenuContainer>#subMenu{top: 0px; left: -100%; border-top: 1px lightgray solid;}
+  .c4SubItem{padding: 10px 0px;}
+  .card{flex-direction: column; height: 400px; margin-top: 60px;}
+  #cardImg{height: 250px; width: 300px;}
+  .card>h2{margin-bottom: 5px; font-size: 12pt; margin: 10px 0px;}
+  #order{margin: 0px;}
+  footer>p{width: 90%;}
+}
